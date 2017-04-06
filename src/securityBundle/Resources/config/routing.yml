@@ -1,0 +1,21 @@
+security_homepage:
+  path:     /register
+  defaults: { _controller: securityBundle:Default:index }
+
+security_viewSearch:
+  path: /searchEmployee
+  defaults: { _controller: securityBundle:Default:search }
+
+security_searchEmployee:
+  path: /searchAll
+  defaults: { _controller: securityBundle:Default:search_employees }
+
+
+security_searchemployeesAll:
+  path: /search
+  defaults: { _controller: securityBundle:Default:search_employeesAll }
+
+
+security_updateEmployee:
+  path: /update
+  defaults: { _controller: securityBundle:Default:update }

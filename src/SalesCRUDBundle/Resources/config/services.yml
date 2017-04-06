@@ -1,0 +1,4 @@
+services:
+#    sales_crud.example:
+#        class: SalesCRUDBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

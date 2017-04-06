@@ -1,0 +1,7 @@
+sales_crud:
+    resource: "@SalesCRUDBundle/Resources/config/routing.yml"
+    prefix:   /sales
+    
+security:
+    resource: "@securityBundle/Resources/config/routing.yml"
+    prefix:   /security

@@ -1,0 +1,3 @@
+sales_crud_homepage:
+    path:     /
+    defaults: { _controller: SalesCRUDBundle:Default:index }

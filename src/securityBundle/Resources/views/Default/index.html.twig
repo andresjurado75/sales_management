@@ -1,0 +1,98 @@
+{% extends '::base.html.twig' %}
+
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{{ asset('Styles/StyleSecurityView.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<nav class=" header navbar navbar-inverse" id="barraNav">
+	<span id="icono" class="glyphicon glyphicon-object-align-left"></span>
+<a href="{{path('security_viewSearch')}}">
+	<span>Buscar Empleado</span>
+</a>
+<a>
+    <span>Actualizar Empleado</span>
+</a>
+<a>
+    <span>Eliminar Empleado</span>
+</a>
+</nav>
+
+<div>
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li class="active">
+            Registrar
+        </li>
+    </ol>
+</div>
+
+<div class="container">
+	<div class="panel panel-default row" >
+		<div class="panel-heading">
+			<h3 class="panel-title"> Registar Empleados </h3>
+		</div>
+            <div class="panel-body col-lg-12">
+                
+                {{ form_start(form, {"attr":{"novalidate":"novalidate"}})}}
+                
+                <div class="input-group">
+                    <span class="input-group-addon">Identificacion del Empleado</span>
+                    {{form_widget(form.idEmployee, {"attr":{"class":"form-control", "placeholder":"Ingrese su Identificacion"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.idEmployee) }} </span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Nombre del Empleado</span>
+                    {{form_widget(form.employeeName, {"attr":{"class":"form-control", "placeholder":"Ingrese su Nombre"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.employeeName) }} </span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Apellido del Empleado</span>
+                    {{form_widget(form.employeeLastname, {"attr":{"class":"form-control", "placeholder":"Ingrese su Apellido"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.employeeLastname) }} </span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Email del Empleado</span>
+                    {{form_widget(form.email, {"attr":{"class":"form-control", "placeholder":"Ingrese su Email"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.email) }} </span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Password</span>
+                    {{form_widget(form.password, {"attr":{"class":"form-control", "placeholder":"Ingrese un password"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.password) }} </span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Selecciones un Role</span>
+                    {{form_widget(form.roles, {"attr":{"class":"form-control"}})}}
+                </div>
+                <div>
+                     <span class="text-danger"> {{ form_errors(form.roles) }} </span>
+                </div>
+                <div>
+                    {{form_widget(form.Registrar)}}
+                </div>
+                
+
+		{{ form_end(form) }}
+            </div>
+	</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}

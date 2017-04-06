@@ -1,0 +1,21 @@
+
+#icono{
+	position:relative;
+	Color: #d50000;
+	font-size: 30px;
+	top: 10px;
+	left: 10px;
+}
+
+
+#form_Registrar{
+	position: relative;
+	top: 5px;
+	left: 500px;
+	height: 35px;
+	width: 100px;
+}
+
+#barraNav{
+	background-color: blue;
+} 
